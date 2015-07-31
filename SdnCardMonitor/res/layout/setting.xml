@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/content_bg"
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:baselineAligned="false"
+        android:weightSum="4" >
+        
+        <ListView  
+        	android:id="@+id/lv_warning_left"  
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="5dp"
+        	android:layout_weight="2" >  
+    	</ListView>
+    
+        <!-- here need to set weight, or second listview wont be seen -->
+        <ListView  
+        	android:id="@+id/lv_error_right"  
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginRight="5dp"
+        	android:layout_weight="2" >  
+    	</ListView>
+        
+    </LinearLayout>
+    
+    <TextView
+    	    android:layout_width="fill_parent"
+    	    android:background="@color/skyblue"
+        	android:layout_height="2dp"/>
+    <TextView
+    	    android:layout_width="fill_parent"
+        	android:layout_height="5dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/content_bg"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal" >
+    	<TextView
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="5dp"
+        	android:text="Save Log?"/>
+    	<CheckBox
+    	    android:id="@+id/setting_savelog"
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"/>
+    	<TextView
+    	    android:layout_width="30dp"
+        	android:layout_height="wrap_content"/>
+    	
+    	<TextView
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text=" pop up error?"/>
+    	<CheckBox
+    	    android:id="@+id/setting_popup"
+    	    android:layout_width="wrap_content"
+    	    android:layout_marginRight="5dp"
+        	android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <TextView
+    	    android:layout_width="fill_parent"
+        	android:layout_height="12dp"/>
+	<!-- 
+	<RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    	<Button
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_alignParentRight="true"
+        	android:layout_marginRight="20dp"
+        	android:text="OK"/>
+    </RelativeLayout>
+     -->
+
+</LinearLayout>

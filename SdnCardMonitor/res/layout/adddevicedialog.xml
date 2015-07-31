@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <EditText
+        android:id="@+id/ev_deviceip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:hint="@string/add_device_ip_hint"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/ev_devicename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:maxLength="20"
+        android:hint="@string/add_device_name_hint"
+        android:textColor="@color/black" />
+         
+</LinearLayout>

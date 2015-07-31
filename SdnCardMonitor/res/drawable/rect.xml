@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    
+    <!-- Fill color -->
+    <solid android:color="#FFFFFF"></solid>
+    
+    <!-- border line width, color -->
+    <stroke android:width="1dp" android:color="#D5D5D5"></stroke>
+    
+    <!-- corner radius -->
+    <corners android:radius="1dp"></corners>
+</shap>

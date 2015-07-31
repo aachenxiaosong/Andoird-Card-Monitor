@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/content_bg"
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:baselineAligned="false"
+        android:weightSum="5" >
+        
+        <Spinner
+                android:id="@+id/debug_cmd_sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+    
+        <Button  
+        	android:id="@+id/debug_delete_customize"  
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="-"
+        	android:layout_weight="1" >  
+    	</Button>
+    	
+        <Button  
+        	android:id="@+id/debug_send_exist"  
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginRight="5dp"
+        	android:text="Send"
+        	android:layout_weight="1" >  
+    	</Button>
+        
+    </LinearLayout>
+
+    <TextView
+    	    android:layout_width="fill_parent"
+        	android:layout_height="5dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/content_bg"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal"
+        android:weightSum="4" >
+    	<EditText
+                android:id="@+id/debug_cmd_customize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Input customized command"
+                android:layout_weight="2" />
+    
+     
+    	<Button  
+        	android:id="@+id/debug_add_customize"  
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="+"
+        	android:layout_weight="1" >  
+    	</Button>
+        <Button  
+        	android:id="@+id/debug_send_customize"  
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginRight="5dp"
+        	android:text="Send"
+        	android:layout_weight="1" >  
+    	</Button>
+    </LinearLayout>
+    
+    <TextView
+    	android:layout_width="fill_parent"
+        android:layout_height="5dp"/>
+    
+    <ScrollView  
+        android:layout_width="fill_parent"  
+    	android:layout_height="wrap_content"
+    	android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+    	>
+    	<TextView
+        	android:id="@+id/debug_result"
+        	android:background="@drawable/content_bg"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:hint = "result"
+        	android:textSize="10dp"
+        />
+    </ScrollView>
+
+</LinearLayout>
