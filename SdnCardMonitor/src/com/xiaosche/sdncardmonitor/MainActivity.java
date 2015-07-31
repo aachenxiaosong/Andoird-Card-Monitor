@@ -9,6 +9,8 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -22,9 +24,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
@@ -67,10 +71,12 @@ public class MainActivity extends FragmentActivity {
 	private TextView mWarningText;
 	private TextView mErrorText;
 	private TextView mNoconnText;
+	private Button mLink;
 	private int mTotal;
 	private int mWarning;
 	private int mError;
 	private int mNoconn;
+	
 	private PagerAdapter mAdapter;
 	
 	@Override
@@ -99,6 +105,32 @@ public class MainActivity extends FragmentActivity {
 		mError = 0;
 		mNoconnText = (TextView)findViewById(R.id.tv_overall_unconnect);
 		mNoconn = 0;
+		mLink = (Button)findViewById(R.id.bt_link);
+		mLink.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Uri uri = Uri.parse("http://10.79.41.59:8181/cmts/sdn/lcha/index.html");  
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);  
+                
+                startActivity(intent);
+				/*
+				View linkview = LayoutInflater.from(MainActivity.this).inflate(R.layout.link, null);
+				WebView wv = (WebView) linkview.findViewById(R.id.webView01);
+				
+				wv.loadUrl("http://10.79.41.59:8181/cmts/sdn/lcha/index.html");
+				wv.setScrollContainer(true);
+	            new AlertDialog.Builder(MainActivity.this).setView(linkview).setTitle("LCHA").
+	                           setPositiveButton("OK", new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						// TODO Auto-generated method stu
+					}
+				}).setNegativeButton("Cancel", null).show();*/
+			}
+		});
 		
 		mSpinner = (Spinner)findViewById(R.id.sp_name);
 		mSpinnerAdapter = new ShowDeviceAdapter(this.getApplicationContext());
